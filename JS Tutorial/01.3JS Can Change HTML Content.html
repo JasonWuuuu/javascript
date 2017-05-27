@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Can Change HTML Attributes</title>
+</head>
+<body>
+   <h2>JavaScript can change HTML attributes.</h2>
+   <button id="bulbon">Click to light the bulb</button>
+   <img src="img/pic_bulboff.gif" alt="This is a light bulb" id="bulb">
+   <button id="bulboff">Click to turn off the bulb</button>
+   <script>
+    document.addEventListener('click',function (e) {
+        var photos=["img/pic_bulbon.gif","img/pic_bulboff.gif"];
+        switch(e.target.id){
+            case "bulbon": document.getElementById("bulb").src=photos[0]  ;break;
+            case "bulboff":  document.getElementById("bulb").src=photos[1] ;break;
+            default: break;
+        }
+    },false);
+   </script>
+
+</body>
+</html>
+   </script>
+</body>
+</html>

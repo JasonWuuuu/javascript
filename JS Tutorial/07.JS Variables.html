@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Operators</title>
+</head>
+<body>
+<ul>
+    <li>Js identifiers are case sensitive:
+        <pre>
+             var name="wuzixin",Name="xiaoming" ;
+             console.log(name===Name)//false;
+        </pre>
+    </li>
+    <li> Variable Declaring Hoisting:
+        <pre>
+            a = 5;  //Global
+            function () {
+                        console.log(a);//undefined ( declared without a value)
+                        var a;
+            }
+        </pre>
+    </li>
+    <li>Redeclare a variable
+        <pre>
+            var a=5;
+            var a;
+            console.log(a);//it won't be "undefined",but still 5;
+        </pre>
+    </li>
+    <li>The plus opreator:
+        <pre>
+            var a=" "+1+2;// "12"
+            var b=2+3+"5 ";//"55"
+        </pre>
+    </li>
+</ul>
+
+
+</body>
+</html>
