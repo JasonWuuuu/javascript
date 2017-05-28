@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<ul id="date">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+<script >
+   var element=document.getElementById("date");
+   /*不传参，返回现在时间对象，在innerHTML中显示时自动调用toString（）换成字符串*/
+   date.childNodes[1].innerHTML=Date();
+   date.childNodes[3].innerHTML=new Date();
+   date.childNodes[5].innerHTML=new Date(Date.UTC(2017,4,28,22,22,0));
+   /*格式化的日期格式如下*/
+   date.childNodes[7].innerHTML=new Date("May 28,2018 23:30:00");
+   /*最方便好记的一个，月份从0开始*/
+   date.childNodes[9].innerHTML=new Date(2018,9,20,11,30,30);
+   date.childNodes[11].innerHTML=new Date(2018,9,20);
+   var d=new Date(2018,9,20,11,30,30)
+   date.childNodes[13].innerHTML=d.toUTCString() ;
+</script>
+</body>
+</html>
