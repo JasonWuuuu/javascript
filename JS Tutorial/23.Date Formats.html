@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dates Formats</title>
+</head>
+<body>
+<ul id="date">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+
+</ul>
+<script >
+   var element=document.getElementById("date");
+   /*Date设置的是格林威治时间,格式化输出之前会换算到当前时区！！*/
+   /*以下为ISO标准输入格式的几种用法*/
+   date.childNodes[1].innerHTML=new Date("2017-05-29");
+   date.childNodes[3].innerHTML=new Date("2017-05");
+   date.childNodes[5].innerHTML=new Date("2017");
+   /*月份跟日期必须是两位，0不能省略*/
+   date.childNodes[7].innerHTML=new Date("2017-5-29T20:20:20Z");
+   /*省略T或Z在不同浏览器中会有不同的表现*/
+   date.childNodes[9].innerHTML=new Date("2017-05-29T12:00:00-06:30");
+   /*日期简写 月 日 年 */
+   date.childNodes[11].innerHTML=new Date("05/29/2017");
+   date.childNodes[13].innerHTML=new Date("5/2/2017");
+   /*MMM DD YYYY 日期长写法,日期跟月份顺序随意*/
+   date.childNodes[15].innerHTML=new Date("May 29 2015");
+   date.childNodes[17].innerHTML=new Date("29 August 2015");
+   date.childNodes[19].innerHTML=new Date("29 Aug 2015");
+   /*完整日期写法*/
+   date.childNodes[21].innerHTML=new Date("Wed May 25 2017 23:28:00 GMT+0100(W. Europe Standard Time)");
+    /*星期跟括号里所在时区信息的错误都会被忽略*/
+   date.childNodes[23].innerHTML=new Date("Fri Mar 25 2015 09:56:24 GMT+0800 (中国时间)")
+</script>
+</body>
+</html>
