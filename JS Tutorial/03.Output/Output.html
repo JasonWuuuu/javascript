@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Output</title>
+
+</head>
+<body>
+<h2 id="title">Js Output</h2>
+<input type="text" id="output" placeholder="请输入被输出的数据">
+<button id="innerHTML">Using innerHTML</button>
+<button id="alert">Using window.alert</button>
+<button id="console">Using consloe.log</button>
+<button id="document">Using document.write</button>
+
+<script>
+    (function () {
+        if (document.addEventListener) {
+            document.addEventListener('click', handler, false);
+
+        }
+        else {
+            document.attachEvent('click', handler);
+        }//IE事件兼容
+
+
+        function handler(e) {
+            var title = document.getElementById("title"),
+                output = document.getElementById("output").value;//input框用value而不是nodevalue，后者指的应该是标签中innerHTML的值
+            ;
+            switch (e.target.id) {
+                case "innerHTML":
+                    title.innerHTML = output;
+                    break;
+                case "alert":
+                    window.alert(output);
+                    break;
+                case "console":
+                    console.log(output);
+                    break;
+                case "document":
+                    document.write(output);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+    })();
+</script>
+
+
+</body>
+</html>
+
