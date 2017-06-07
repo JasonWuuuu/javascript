@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Operators</title>
+</head>
+<body>
+<ul>
+
+    <li>plus operator can also concatenate strings
+        <pre>
+            var a="hello",b="world";
+            console.log（a+=b）;//"hello world"
+        </pre>
+    </li>
+    <li>
+        ==（equal value） vs ===（equal value and equal type）
+        <pre>
+            var a=5,b="5";
+            console.log(a==b);//true
+            console.log(a===b);//false
+        </pre>
+    </li>
+    <li>Logical Operators
+        <pre>
+            1.&&  AND operator
+            var b,c;
+            var a= (b=0)&&(c=1);// c===undefined cause condition left is already 0,"c=1"will not be excuted
+            2.|| OR operator
+            var b,c;
+            var a= (b=1)||(c=1;)//c===undefined cause condition left is already 1;"c=1"will not be excuted
+        </pre>
+    </li>
+
+</ul>
+
+
+</body>
+</html>
