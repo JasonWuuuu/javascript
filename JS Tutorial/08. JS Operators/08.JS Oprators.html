@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08.JS Oprators</title>
+</head>
+<body>
+<ul>
+
+    <li>plus operator can also concatenate strings
+        <p id="result1"></p>
+    </li>
+    <li>
+        ==（equal value） vs ===（equal value and equal type）
+        <p id="result2"></p>
+    </li>
+    <li>Logical Operators
+        <p id="result3"></p>
+        <p id="result4"></p>
+    </li>
+
+</ul>
+
+
+<script>
+    /*plus operator can also concatenate strings*/
+    var a = "hello", b = "world";
+    a += b;
+    document.getElementById('result1').innerHTML = a;//"hello world"
+    /*==（equal value） vs ===（equal value and equal type）*/
+    var c = 5, d = "5";
+    var result1 = (c == d),
+        result2 = (c === d);
+    document.getElementById('result2').innerHTML = "result1=" + result1 + "<br/>" + "result2=" + result2;//true,false
+    /*Logical Operators*/
+    var e, f;
+    var result3 = (e = 0) && (f = 1);// f===undefined cause condition left is already 0,"f=1"will not be excuted
+    document.getElementById('result3').innerHTML = f;
+    var g, h;
+    var result4 = (g = 1) || (h = 1);//h===undefined cause condition left is already 1;"h=1"will not be excuted
+    document.getElementById('result4').innerHTML = h;
+    /*Bitwise Operators*/
+    var i = 5 & 1;//等同于  0101&0001 结果 0001 即1
+    var j = 5 | 1//等同于   0101|0001 结果 0101 即5
+    var k = ~j;//等同于   0101按位取反  ！！但js使用的是32位数据存储   即四个字节   所以0000 0000 0000 0101 按位取反 1111 1111 1111 1010
+                //计算机中负数存储用补码形式（原码除符号位按位取反再加1）  即是1000 0000 0000 0110  结果为-6
+    var l = 1 ^ 5;//等同于   0001异或0101 结果 100 即4
+    var m = 1 << 3;//等同于   0001*8 结果 100 即8
+    var n = 1 >> 3;//0001右移3位 结果 0x0010 即2
+    var o = 5 >>> 2;//这个只有右移  且自动在第一位补零 结果为0001 即1
+</script>
+</body>
+</html>
