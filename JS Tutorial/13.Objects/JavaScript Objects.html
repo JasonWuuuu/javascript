@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Objects</title>
+</head>
+<body>
+<script>
+    /*不要使用构造函数来构造基本类型，没有必要*/
+    var x=new String();
+    var y=new Number();
+    var z=new Boolean();
+    /*一般直接用字面量*/
+    var car={
+        brand:"BMW",
+        price:"$5000"
+    }
+    /*访问成员的方法*/
+    var price="price";
+    console.log(car.brand);
+    console.log(car[price]);/*方括号的好处在于，可以使用变量来访问*/
+</script>
+</body>
+</html>
