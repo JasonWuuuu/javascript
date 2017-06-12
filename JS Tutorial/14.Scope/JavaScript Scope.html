@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Scope</title>
+</head>
+<body>
+<ul>
+    <li>Automatically Global(Don't do this)
+    </li>
+</ul>
+
+
+
+<script>
+    function Car(){
+        carname="Volvo";//without the keyword "var",this property becomes a global one
+                        //when "use strict",it fails to create a automatically global variable
+    }
+
+</script>
+</body>
+</html>
