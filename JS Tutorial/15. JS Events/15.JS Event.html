@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Event</title>
+</head>
+<body>
+<h2>JS Event</h2>
+<input type="text" id="input" placeholder="change me!"/>
+<div id="event"></div>
+</body>
+<script>
+    (function () {
+        var element = document.getElementById("event"),
+            input = document.getElementById("input");
+        var handler = function (e) {
+            e = e || window.event;
+            element.innerHTML = e.type;
+        }
+        input.addEventListener('change', function () {
+            this.value = "you have changed something";
+
+        }, false)
+        element.onclick = handler;
+        element.onmouseover = handler;
+        element.onmouseout = handler;
+        window.onload = handler;
+        window.onkeydown = handler;
+        window.onkeyup = handler;
+
+
+    })()
+</script>
+</html>
